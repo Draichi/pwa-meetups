@@ -10,7 +10,7 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar app color="deep-purple">
+    <v-toolbar app color="deep-purple darken-1">
       <v-toolbar-side-icon @click.stop="sideNav = !sideNav"></v-toolbar-side-icon>
       <v-toolbar-title>
         <router-link to="/" tag="span" style="cursor: pointer">
