@@ -2,9 +2,9 @@
   <v-container>
     <v-layout row wrap v-for="meetup in meetups" :key="meetup.title" class="mb-4">
       <v-flex xs12 sm6 offset-sm3>
-        <v-card light>
+        <v-card>
           <v-card-media
-            height="20vh"
+            height="30vh"
             :src="meetup.src"
           >
             <v-container fill-height fluid>
@@ -19,7 +19,7 @@
             <h3>{{ meetup.title }}</h3>
           </v-card-title>
           <v-card-actions>
-            <v-btn flat color="deep-purple" :to="'meetups/' + meetup.id">
+            <v-btn flat color="orange" :to="'meetups/' + meetup.id">
               <v-icon left>arrow_forward</v-icon>
               VAMO ZUA</v-btn>
           </v-card-actions>
