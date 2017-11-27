@@ -10,7 +10,7 @@
     </v-layout>
     <v-layout row wrap>
       <v-flex xs12 sm8 offset-sm2>
-        <v-carousel hide-delimiters style="cursor: pointer; height: 70vh;">
+        <v-carousel style="cursor: pointer; height: 70vh;">
           <v-carousel-item
             v-for="meetup in meetups"
             v-bind:key="meetup.id"
@@ -29,13 +29,9 @@
 
 <script>
 export default {
-  data () {
-    return {
-      meetups: [
-        { src: 'https://images.unsplash.com/photo-1445452916036-9022dfd33aa8?auto=format&fit=crop&w=753&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D', id: '123', title: 'Hey' },
-        { src: 'https://images.unsplash.com/photo-1445787517961-a36e33995743?auto=format&fit=crop&w=850&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D', id: '1234', title: 'How' },
-        { src: 'https://images.unsplash.com/photo-1434394354979-a235cd36269d?auto=format&fit=crop&w=733&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D', id: '12345', title: 'U doin?' }
-      ]
+  computed: {
+    meetups () {
+      return this.$store.getters.featuredMeetups
     }
   },
   methods: {
