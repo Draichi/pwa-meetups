@@ -19,7 +19,7 @@
             <h3>Lucas Draichi</h3>
           </v-card-title>
           <v-card-actions>
-            <v-btn flat color="deep-purple">
+            <v-btn flat color="deep-purple" to="meetups/1">
               <v-icon left>arrow_forward</v-icon>
               VAMO ZUA</v-btn>
           </v-card-actions>
