@@ -5,7 +5,7 @@
         <v-card>
           <v-card-media
             height="30vh"
-            :src="meetup.src"
+            :src="meetup.imageUrl"
           >
             <v-container fill-height fluid>
               <v-layout fill-height>

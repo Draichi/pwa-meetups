@@ -5,7 +5,7 @@
         <v-card light>
           <v-card-media
             height="50vh"
-            :src="meetup.src"
+            :src="meetup.imageUrl"
           ></v-card-media>
           <v-card-title>
             <h3 class="primary--text">{{ meetup.title }}</h3>
