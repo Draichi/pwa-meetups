@@ -10,7 +10,6 @@
           <v-card-title>
             <h3 class="primary--text">{{ meetup.title }}</h3>
           </v-card-title>
-          <v-card-text>{{ meetup.date }}</v-card-text>
           <v-card-actions>
             <v-spacer></v-spacer>
             <v-btn large color="primary">Register</v-btn>
