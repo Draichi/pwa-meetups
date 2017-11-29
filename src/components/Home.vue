@@ -14,7 +14,7 @@
           <v-carousel-item
             v-for="meetup in meetups"
             v-bind:key="meetup.id"
-            v-bind:src="meetup.src"
+            v-bind:src="meetup.imageUrl"
             @click="onLoadMeetup(meetup.id)"
           >
           <div class="title">
