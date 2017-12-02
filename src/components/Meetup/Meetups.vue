@@ -19,7 +19,7 @@
             <h3>{{ meetup.title }}</h3>
           </v-card-title>
           <v-card-actions>
-            <v-btn flat color="orange" :to="'meetups/' + meetup.id">
+            <v-btn flat color="light-blue darken-4" :to="'meetups/' + meetup.id">
               <v-icon left>arrow_forward</v-icon>
               VAMO ZUA</v-btn>
           </v-card-actions>

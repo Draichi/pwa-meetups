@@ -10,7 +10,7 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar app color="deep-purple darken-1">
+    <v-toolbar app color="light-blue">
       <v-toolbar-side-icon @click.stop="sideNav = !sideNav"></v-toolbar-side-icon>
       <v-toolbar-title>
         <router-link to="/" tag="span" style="cursor: pointer">
@@ -38,14 +38,26 @@
   export default {
     data () {
       return {
-        sideNav: false,
-        menuItems: [
-          { icon: 'supervisor_account', title: 'View Meetups', link: '/meetups' },
-          { icon: 'room', title: 'Organize', link: '/meetup/new' },
+        sideNav: false
+      }
+    },
+    computed: {
+      menuItems () {
+        let menuItems = [
           { icon: 'face', title: 'Sign up', link: '/signup' },
-          { icon: 'lock_open', title: 'Sign in', link: '/signin' },
-          { icon: 'person', title: 'Profile', link: '/profile' }
+          { icon: 'lock_open', title: 'Sign in', link: '/signin' }
         ]
+        if (this.userAuthenticaded) {
+          menuItems = [
+            { icon: 'supervisor_account', title: 'View Meetups', link: '/meetups' },
+            { icon: 'room', title: 'Organize', link: '/meetup/new' },
+            { icon: 'person', title: 'Profile', link: '/profile' }
+          ]
+        }
+        return menuItems
+      },
+      userAuthenticaded () {
+        return this.$store.getters.user !== null && this.$store.getters.user !== undefined
       }
     }
   }
