@@ -16,12 +16,12 @@
             </v-container>
           </v-card-media>
           <v-card-title>
-            <h3>{{ meetup.title }}</h3>
+            <h3>{{ meetup.title }} - {{ meetup.location }}</h3>
           </v-card-title>
           <v-card-actions>
-            <v-btn flat color="light-blue darken-4" :to="'meetups/' + meetup.id">
+            <v-btn flat color="light-blue lighten-2" :to="'meetups/' + meetup.id">
               <v-icon left>arrow_forward</v-icon>
-              VAMO ZUA</v-btn>
+              Show</v-btn>
           </v-card-actions>
         </v-card>
       </v-flex>

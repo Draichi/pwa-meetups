@@ -20,7 +20,7 @@
     </v-layout>
     <v-layout row wrap v-if="!loading">
       <v-flex xs12 sm8 offset-sm2>
-        <v-carousel style="cursor: pointer; height: 70vh;">
+        <v-carousel light style="cursor: pointer; height: 70vh;">
           <v-carousel-item
             v-for="meetup in meetups"
             v-bind:key="meetup.id"

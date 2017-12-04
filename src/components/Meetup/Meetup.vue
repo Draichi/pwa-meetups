@@ -8,7 +8,11 @@
             :src="meetup.imageUrl"
           ></v-card-media>
           <v-card-title>
-            <h3 class="primary--text">{{ meetup.title }}</h3>
+            <div class="">
+              <h2 class="headline primary--text">{{ meetup.title }}</h2><br>
+              <h4><v-icon color="light-blue">place</v-icon> {{ meetup.location }}</h4><br>
+              <h4>{{ meetup.description }}</h4>
+            </div>
           </v-card-title>
           <v-card-actions>
             <v-spacer></v-spacer>
