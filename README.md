@@ -1,6 +1,8 @@
-# pwa-instagram
+![screenshot](screenshot.png?raw=true "screenshot")
 
-> SPA PWA inspired by instagram
+# pwa-meetups
+
+> Vue.js + Vuetify.js + Vuex + Firebase project built to users create dev meetups
 
 ## Build Setup
 
