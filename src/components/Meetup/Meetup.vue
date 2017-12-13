@@ -1,6 +1,16 @@
 <template>
   <v-container>
-    <v-layout row wrap>
+    <v-layout row v-if="loading">
+      <v-flex xs12 class="text-xs-center">
+        <v-progress-circular 
+          indeterminate 
+          class="primary--text"
+          :width="10"
+          :height="100"
+        ></v-progress-circular>
+      </v-flex>
+    </v-layout>
+    <v-layout row wrap v-else>
       <v-flex xs12>
         <v-card light>
           <v-card-media
@@ -15,6 +25,9 @@
             </div>
           </v-card-title>
           <v-card-actions>
+            <template v-if="userIsTheCreator">
+              <edit-modal :meetup="meetup"></edit-modal>
+            </template>
             <v-spacer></v-spacer>
             <v-btn large color="primary">Register</v-btn>
           </v-card-actions>
@@ -30,6 +43,19 @@ export default {
   computed: {
     meetup () {
       return this.$store.getters.loadedMeetup(this.id)
+    },
+    userIsAuthenticated () {
+      return this.$store.getters.user !== null && this.$store.getters.user !== undefined
+    },
+    userIsTheCreator () {
+      if (!this.userIsAuthenticated) {
+        return false
+      } else {
+        return this.$store.getters.user.id === this.meetup.creatorId
+      }
+    },
+    loading () {
+      return this.$store.getters.loading
     }
   }
 }

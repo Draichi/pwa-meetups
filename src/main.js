@@ -9,10 +9,12 @@ import * as firebase from 'firebase'
 import router from './router'
 import { store } from './store'
 import Alert from './components/Shared/Alert.vue'
+import EditMeetupModal from './components/Meetup/Edit/EditMeetupModal.vue'
 
 Vue.use(Vuetify)
 Vue.config.productionTip = false
 Vue.component('app-alert', Alert)
+Vue.component('edit-modal', EditMeetupModal)
 
 /* eslint-disable no-new */
 new Vue({
