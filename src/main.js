@@ -10,11 +10,13 @@ import router from './router'
 import { store } from './store'
 import Alert from './components/Shared/Alert.vue'
 import EditMeetupModal from './components/Meetup/Edit/EditMeetupModal.vue'
+import RegisterModal from './components/Meetup/Register/RegisterModal.vue'
 
 Vue.use(Vuetify)
 Vue.config.productionTip = false
 Vue.component('app-alert', Alert)
 Vue.component('edit-modal', EditMeetupModal)
+Vue.component('register-modal', RegisterModal)
 
 /* eslint-disable no-new */
 new Vue({

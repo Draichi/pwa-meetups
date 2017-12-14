@@ -1,6 +1,6 @@
 <template>
   <v-dialog persistent max-width="350" v-model="modalDialog">
-    <v-btn fab color="primary" slot="activator">
+    <v-btn fab slot="activator">
       <v-icon>edit</v-icon>
     </v-btn>
     <v-card>

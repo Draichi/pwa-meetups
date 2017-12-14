@@ -29,7 +29,7 @@
               <edit-modal :meetup="meetup"></edit-modal>
             </template>
             <v-spacer></v-spacer>
-            <v-btn large color="primary">Register</v-btn>
+            <register-modal :idOfMeetup="meetup.id"></register-modal>
           </v-card-actions>
         </v-card>
       </v-flex>
