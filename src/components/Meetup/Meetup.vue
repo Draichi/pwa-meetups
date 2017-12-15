@@ -18,18 +18,31 @@
             :src="meetup.imageUrl"
           ></v-card-media>
           <v-card-title>
-            <div class="">
-              <h2 class="headline primary--text">{{ meetup.title }}</h2><br>
-              <h4><v-icon color="light-blue">place</v-icon> {{ meetup.location }}</h4><br>
+            <div>
+              <h2
+                class="headline primary--text"
+              >{{ meetup.title }}</h2><br>
+              <h4>
+                <v-icon
+                  color="light-blue"
+                >place</v-icon>{{ meetup.location }}
+              </h4><br>
               <h4>{{ meetup.description }}</h4>
             </div>
           </v-card-title>
           <v-card-actions>
-            <template v-if="userIsTheCreator">
-              <edit-modal :meetup="meetup"></edit-modal>
+            <template
+              v-if="userIsTheCreator"
+            >
+              <edit-modal
+                :meetup="meetup"
+              ></edit-modal>
             </template>
             <v-spacer></v-spacer>
-            <register-modal :idOfMeetup="meetup.id"></register-modal>
+            <register-modal
+              v-if="userIsAuthenticated && !userIsTheCreator"
+              :idOfMeetup="meetup.id"
+            ></register-modal>
           </v-card-actions>
         </v-card>
       </v-flex>

@@ -214,6 +214,37 @@ export const store = new Vuex.Store({
         fbKeys: {}
       })
     },
+    fetchUserData ({commit, getters}) {
+      commit('setLoading', true)
+      firebase.database().ref('/users/' + getters.user.id + '/registrations/').once('value')
+        .then(data => {
+          // data received is not a valid obj
+          // we need to access with .val()
+          const dataValues = data.val()
+          let registeredMeetups = []
+          let swappedValues = {}
+          for (let key in dataValues) {
+            // pushing just the values (registered meetups)
+            registeredMeetups.push(dataValues[key])
+            // this order will be = meetupId: fbKey
+            swappedValues[dataValues[key]] = key
+            // confused? uncomment this below
+            // console.log(registeredMeetups)
+            // console.log(swappedValues)
+          }
+          const updatedUser = {
+            id: getters.user.id,
+            registeredMeetups: registeredMeetups,
+            fbKeys: swappedValues
+          }
+          commit('setLoading', false)
+          commit('setUser', updatedUser)
+        })
+        .catch(error => {
+          console.log(error)
+          commit('setLoading', false)
+        })
+    },
     logout ({commit}) {
       firebase.auth().signOut()
       commit('setUser', null)
