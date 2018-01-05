@@ -2,9 +2,13 @@
 
 # [Live Demo](https://meetupsproject.firebaseapp.com/)
 
-# pwa-meetups
+# PWA-meetups
 
 > Vue.js + Vuetify.js + Vuex + Firebase project built to users create dev meetups
+
+## Using
+
+Create a login to create a meetup and subscribe to new meetups
 
 ## Build Setup
 
