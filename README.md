@@ -1,5 +1,7 @@
 ![screenshot](screenshot.png?raw=true "screenshot")
 
+# [Live Demo](https://meetupsproject.firebaseapp.com/)
+
 # pwa-meetups
 
 > Vue.js + Vuetify.js + Vuex + Firebase project built to users create dev meetups
