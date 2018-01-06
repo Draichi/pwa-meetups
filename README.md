@@ -1,6 +1,7 @@
 ![screenshot](screenshot.png?raw=true "screenshot")
 ![made with vue](https://forthebadge.com/images/badges/made-with-vue.svg "made with vue")
 ![dr.bhrule](https://forthebadge.com/images/badges/certified-steve-bruhle.svg "dr.bhrule")
+![built-for-android](https://forthebadge.com/images/badges/built-for-android.svg "built-for-android")
 
 # [Live Demo](https://meetupsproject.firebaseapp.com/)
 
