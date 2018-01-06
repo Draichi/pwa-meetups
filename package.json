@@ -12,6 +12,9 @@
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit/specs"
   },
+  "keywords": [
+    "pwa", "vue", "vuex", "vuetify", "firebase"
+  ],
   "dependencies": {
     "firebase": "^4.7.0",
     "vue": "^2.3.3",
