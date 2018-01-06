@@ -1,4 +1,6 @@
 ![screenshot](screenshot.png?raw=true "screenshot")
+![made with vue](https://forthebadge.com/images/badges/made-with-vue.svg "made with vue")
+![dr.bhrule](https://forthebadge.com/images/badges/certified-steve-bruhle.svg "dr.bhrule")
 
 # [Live Demo](https://meetupsproject.firebaseapp.com/)
 
