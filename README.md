@@ -8,7 +8,7 @@
 
 ## Using
 
-Create a login to create a meetup and subscribe to new meetups
+> Create a login to create a meetup and subscribe to new meetups
 
 ## Build Setup
 
