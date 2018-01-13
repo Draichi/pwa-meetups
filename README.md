@@ -35,4 +35,10 @@ npm run unit
 npm test
 ```
 
+
+## Deploy
+
+```
+firebase deploy
+```
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
