@@ -107,7 +107,7 @@ export default {
         description: this.description
       }
       this.$store.dispatch('createMeetup', meetupData)
-      this.$router.push('/meetups')
+      this.$router.push('/home')
     }
   }
 }

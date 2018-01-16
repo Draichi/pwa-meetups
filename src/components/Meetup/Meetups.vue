@@ -1,7 +1,8 @@
 <template>
   <v-container>
-    <v-layout row wrap v-for="meetup in meetups" :key="meetup.title" class="mb-4">
+    <v-layout row wrap v-for="meetup in favoriteds" :key="meetup.title" class="mb-4">
       <v-flex xs12 sm6 offset-sm3>
+        {{ favoriteds }}
         <v-card>
           <v-card-media
             height="30vh"
@@ -10,13 +11,13 @@
             <v-container fill-height fluid>
               <v-layout fill-height>
                 <v-flex xs12 align-end flexbox>
-                  <h2 class="headline grey--text">{{ meetup.date }}</h2>
+                  <h2 class="headline grey--text">{{ meetup }}</h2>
                 </v-flex>
               </v-layout>
             </v-container>
           </v-card-media>
           <v-card-title>
-            <h3>{{ meetup.title }} - {{ meetup.location }}</h3>
+            <h3>{{ meetup }} - {{ meetup.location }}</h3>
           </v-card-title>
           <v-card-actions>
             <v-btn flat color="light-blue lighten-2" :to="'meetups/' + meetup.id">
@@ -34,6 +35,9 @@ export default {
   computed: {
     meetups () {
       return this.$store.getters.loadedMeetups
+    },
+    favoriteds () {
+      return this.$store.getters.registeredMeetups
     }
   }
 }

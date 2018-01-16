@@ -31,12 +31,11 @@
             </div>
           </v-card-title>
           <v-card-actions>
-            <template
-              v-if="userIsTheCreator"
-            >
-              <edit-modal
-                :meetup="meetup"
-              ></edit-modal>
+            <template v-if="userIsTheCreator">
+              <v-tooltip right>
+                <edit-modal :meetup="meetup" slot="activator"></edit-modal>
+                <span>Edit</span>
+              </v-tooltip>
             </template>
             <v-spacer></v-spacer>
             <register-modal
