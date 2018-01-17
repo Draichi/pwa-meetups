@@ -90,6 +90,11 @@ export default {
         })
         .catch(error => console.log(error))
       // Reach out to firebase
+    },
+    registeredMeetups ({commit, getters}, payload) {
+      return getters.loadedMeetups.find(meetup => {
+        return meetup === payload.id
+      })
     }
   },
   getters: {

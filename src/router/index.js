@@ -14,9 +14,13 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/home',
       name: 'Home',
       component: Home
+    },
+    {
+      path: '*',
+      redirect: '/home'
     },
     {
       path: '/meetups',
@@ -38,8 +42,7 @@ export default new Router({
     {
       path: '/profile',
       name: 'Profile',
-      component: Profile,
-      beforeEnter: AuthGuard
+      component: Profile
     },
     {
       path: '/signin',

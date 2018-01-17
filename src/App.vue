@@ -71,7 +71,7 @@
           <span>Home</span>
           <v-icon>home</v-icon>
         </v-btn>
-        <v-btn flat color="light-blue">
+        <v-btn flat to="/meetups" color="light-blue">
           <span>Favorites</span>
           <v-icon>favorite</v-icon>
         </v-btn>
@@ -99,9 +99,8 @@
         ]
         if (this.userAuthenticaded) {
           menuItems = [
-            { icon: 'supervisor_account', title: 'View Meetups', link: '/meetups' },
-            { icon: 'room', title: 'Organize', link: '/meetup/new' },
-            { icon: 'person', title: 'Profile', link: '/profile' }
+            { icon: 'feedback', title: 'Github', link: '/meetups' },
+            { icon: 'help', title: 'About', link: '/profile' }
           ]
         }
         return menuItems
