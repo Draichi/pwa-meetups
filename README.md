@@ -10,9 +10,10 @@
 > Vue.js + Vuetify.js + Vuex + Firebase project built to users create dev meetups
 
 ## Using
-
-> Login: test@test.com , password: test 
 Login to register to meetups or create new one
+
+> Login: test@test.com , password: test
+
 
 ## Build Setup
 
