@@ -11,7 +11,8 @@
 
 ## Using
 
-> Create a login to create a meetup and subscribe to new meetups
+> Login: test@test.com , password: test 
+Login to register to meetups or create new one
 
 ## Build Setup
 
