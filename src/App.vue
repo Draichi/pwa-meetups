@@ -71,13 +71,13 @@
           <span>Home</span>
           <v-icon>home</v-icon>
         </v-btn>
-        <v-btn flat to="/meetups" color="light-blue">
-          <span>Favorites</span>
+        <v-btn flat to="/registered" color="light-blue">
+          <span>Registered</span>
           <v-icon>favorite</v-icon>
         </v-btn>
         <v-btn flat to="/profile" color="light-blue">
-          <span>Created</span>
-          <v-icon>dashboard</v-icon>
+          <span>About</span>
+          <v-icon>help</v-icon>
         </v-btn>
       </v-bottom-nav>
     </v-card>
@@ -99,7 +99,7 @@
         ]
         if (this.userAuthenticaded) {
           menuItems = [
-            { icon: 'feedback', title: 'Github', link: '/meetups' },
+            { icon: 'favorite', title: 'Registered', link: '/registered' },
             { icon: 'help', title: 'About', link: '/profile' }
           ]
         }

@@ -30,7 +30,7 @@
 export default {
   data () {
     return {
-      color: ['cyan darken-2', 'purple', 'blue-grey', 'light-blue darken-4']
+      color: ['cyan darken-2', 'purple', 'blue-grey', 'light-blue darken-4', 'teal', 'orange darken-1', 'brown']
     }
   },
   computed: {
