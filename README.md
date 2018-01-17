@@ -11,7 +11,7 @@
 ## Using
 Login to register to meetups or create new one
 
-> Login: test@test.com , password: test
+> Login: test@test.com , password: lucas123
 
 
 ## Build Setup
