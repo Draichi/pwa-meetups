@@ -10,6 +10,15 @@
         <v-card>
           <v-card-text>
             <v-container>
+              <v-layout>
+                <v-flex class="text-xs-center">
+                  <h2>Testing ?</h2>
+                  <h4>Login: test@test.com</h4>
+                  <h4>Password: lucas123</h4>
+                </v-flex>
+              </v-layout>
+            </v-container>
+            <v-container>
               <form @submit.prevent="onSignIn">
                 <v-layout row>
                   <v-flex xs12>
